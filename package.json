@@ -1,28 +1,16 @@
 {
   "name": "@ai-native-solutions/fallestate-sdk",
   "version": "1.0.0",
-  "description": "FallEstate SDK — programmatic access to the AI-Native Solutions tool catalogue (88 sovereign tools across 9 layers).",
+  "description": "fallestate SDK · sovereign single-file library extracted from fallestate/index.html",
   "type": "module",
   "main": "src/index.js",
-  "exports": {
-    ".": "./src/index.js",
-    "./tools.json": "./src/tools.json"
-  },
-  "files": [
-    "src/",
-    "README.md",
-    "LICENSE"
-  ],
+  "types": "src/index.d.ts",
+  "files": ["src", "docs", "README.md", "LICENSE"],
   "scripts": {
-    "test": "node src/index.js"
+    "test": "node --test test/",
+    "smoke": "node examples/smoke.js"
   },
-  "keywords": [
-    "fallestate",
-    "ai-native-solutions",
-    "sovereign",
-    "catalogue",
-    "sdk"
-  ],
+  "keywords": ["fallestate", "sdk", "sovereign", "ai-native-solutions"],
   "author": "AI-Native Solutions",
   "license": "MIT",
   "repository": {
@@ -30,7 +18,7 @@
     "url": "https://github.com/sjgant80-hub/fallestate-sdk.git"
   },
   "homepage": "https://sjgant80-hub.github.io/fallestate-sdk/",
-  "engines": {
-    "node": ">=18"
+  "publishConfig": {
+    "access": "public"
   }
 }
